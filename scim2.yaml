@@ -72,6 +72,8 @@ paths:
       responses:
         '200':
           description: Valid users are found
+          schema:
+            type: string
         '404':
           description: Valid users are not found
     post:
@@ -112,6 +114,8 @@ paths:
       responses:
         '201':
           description: Valid user is created
+          schema:
+            type: string
         '404':
           description: User is not found
   /scim/v2/Users/.search:
@@ -135,6 +139,8 @@ paths:
       responses:
         '200':
           description: Valid users are found
+          schema:
+            type: string
         '404':
           description: Valid users are not found
   '/scim/v2/Users/{id}':
@@ -174,6 +180,8 @@ paths:
       responses:
         '200':
           description: Valid user is found
+          schema:
+            type: string
         '404':
           description: Valid user is not found
     put:
@@ -219,6 +227,8 @@ paths:
       responses:
         '200':
           description: User is updated
+          schema:
+            type: string
         '404':
           description: Valid user is not found
     delete:
@@ -302,6 +312,8 @@ paths:
       responses:
         '200':
           description: Valid groups are found
+          schema:
+            type: string
         '404':
           description: Valid groups are not found
     post:
@@ -342,6 +354,8 @@ paths:
       responses:
         '201':
           description: Valid group is created
+          schema:
+            type: string
         '404':
           description: Group is not found
   /scim/v2/Groups/.search:
@@ -365,6 +379,8 @@ paths:
       responses:
         '200':
           description: Valid groups are found
+          schema:
+            type: string
         '404':
           description: Valid groups are not found
   '/scim/v2/Groups/{id}':
@@ -404,6 +420,8 @@ paths:
       responses:
         '200':
           description: Valid group is found
+          schema:
+            type: string
         '404':
           description: Valid group is not found
     put:
@@ -449,6 +467,8 @@ paths:
       responses:
         '200':
           description: Group is updated
+          schema:
+            type: string
         '404':
           description: Valid group is not found
     delete:
@@ -503,6 +523,8 @@ paths:
       responses:
         '200':
           description: Valid user is found
+          schema:
+            type: string
         '404':
           description: Valid user is not found
     post:
@@ -543,6 +565,8 @@ paths:
       responses:
         '201':
           description: Valid user is created
+          schema:
+            type: string
         '404':
           description: User is not found
     put:
@@ -583,6 +607,8 @@ paths:
       responses:
         '200':
           description: User is updated
+          schema:
+            type: string
         '404':
           description: Valid user is not found
     delete:
@@ -639,6 +665,8 @@ paths:
       responses:
         '200':
           description: Valid bulk is created
+          schema:
+            type: string
         '404':
           description: Bulk is not found
   /scim/v2/ResourceType:
@@ -655,6 +683,8 @@ paths:
       responses:
         '200':
           description: Schema is found
+          schema:
+            type: string
         '404':
           description: Schema is not found
   /scim/v2/ServiceProviderConfig:
@@ -671,5 +701,12 @@ paths:
       responses:
         '200':
           description: Schema is found
+          schema:
+            type: string
         '404':
           description: Schema is not found
+securityDefinitions:
+  basicAuth:
+    type: basic
+security:
+  - basicAuth: []
